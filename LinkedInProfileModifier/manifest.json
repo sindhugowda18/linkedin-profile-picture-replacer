@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Profile Picture Replacer",
+  "version": "1.0",
+  "description": "Replaces profile pictures on LinkedIn posts with a specified image.",
+  "permissions": ["activeTab", "webNavigation"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.linkedin.com/feed/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/icon48.png",
+        "images/icon128.png"
+      ],
+      "matches": ["*://www.linkedin.com/*"]
+    }
+  ]
+}
